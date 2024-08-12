@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             label1 = new Label();
             timer1 = new System.Windows.Forms.Timer(components);
             SuspendLayout();
@@ -58,11 +59,13 @@
             ControlBox = false;
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximumSize = new Size(200, 75);
             Name = "Form1";
             ShowIcon = false;
             SizeGripStyle = SizeGripStyle.Show;
-            Text = "Form1";
+            StartPosition = FormStartPosition.Manual;
+            Text = "Clock";
             TopMost = true;
             Load += Form1_Load;
             ResumeLayout(false);

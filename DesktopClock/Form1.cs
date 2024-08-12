@@ -1,3 +1,5 @@
+using DesktopClock.Properties;
+
 namespace DesktopClock
 {
     public partial class Form1 : Form
@@ -14,17 +16,24 @@ namespace DesktopClock
         public Form1()
         {
             InitializeComponent();
-            this.MouseDown += Form1_MouseDown;
+            this.MouseClick += Form1_MouseDown;
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             timer1.Start();
+            this.Location = Settings.Default.WindowPosition;
+            this.Icon = Properties.Resources.Clock_icon;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             label1.Text = DateTime.Now.ToString("HH:mm");
+            if (this.Location != Settings.Default.WindowPosition)
+            {
+                Settings.Default.WindowPosition = this.Location;
+                Settings.Default.Save();
+            }
         }
 
         private void Form1_MouseDown(object sender, MouseEventArgs e)
@@ -36,6 +45,7 @@ namespace DesktopClock
             }
             if (e.Button == MouseButtons.Right)
             {
+                Thread.Sleep(200);
                 System.Windows.Forms.Application.Exit();
             }
         }
