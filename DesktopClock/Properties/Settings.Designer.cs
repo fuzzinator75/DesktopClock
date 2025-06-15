@@ -34,5 +34,29 @@ namespace DesktopClock.Properties {
                 this["WindowPosition"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string FontSetting {
+            get {
+                return ((string)(this["FontSetting"]));
+            }
+            set {
+                this["FontSetting"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string ColorSetting {
+            get {
+                return ((string)(this["ColorSetting"]));
+            }
+            set {
+                this["ColorSetting"] = value;
+            }
+        }
     }
 }
