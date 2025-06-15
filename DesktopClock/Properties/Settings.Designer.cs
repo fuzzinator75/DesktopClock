@@ -58,5 +58,17 @@ namespace DesktopClock.Properties {
                 this["ColorSetting"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool TimeFormat24H {
+            get {
+                return ((bool)(this["TimeFormat24H"]));
+            }
+            set {
+                this["TimeFormat24H"] = value;
+            }
+        }
     }
 }

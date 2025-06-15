@@ -60,7 +60,8 @@
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
-            MaximumSize = new Size(200, 75);
+            MinimumSize = new Size(10, 5);
+            MaximumSize = new Size(1000, 800);
             Name = "Form1";
             ShowIcon = false;
             SizeGripStyle = SizeGripStyle.Show;
